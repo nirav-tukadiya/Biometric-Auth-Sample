@@ -1,1 +1,1 @@
-include ':app', ':biometric-auth'
+include ':app', ':biometric-compat'
