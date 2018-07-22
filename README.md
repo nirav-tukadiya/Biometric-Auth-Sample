@@ -39,4 +39,8 @@ The ```BiometricCallback``` class has the following callback methods:
 ```
 
 
+Acknowledgements
+----------------
+
+[Biometric-Auth-Sample](https://github.com/anitaa1990/Biometric-Auth-Sample) by Anitaa Murthy
 

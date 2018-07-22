@@ -28,7 +28,6 @@ class MainActivity : AppCompatActivity(), BiometricCallback {
         }
     }
 
-
     override fun onSdkVersionNotSupported() {
         Toast.makeText(applicationContext, getString(R.string.biometric_error_sdk_not_supported), Toast.LENGTH_LONG).show()
     }
