@@ -15,6 +15,16 @@ It provides an easy way to implement fingerprint authentication without having t
 <b>Gradle Dependecy</b></br>
 
 ```gradle
+
+<b>Project build.gradle</b>
+
+repositories {
+        jcenter()
+        mavenCentral()
+}
+
+<b>app build.gradle </b>
+
 dependencies {
         implementation 'com.niravtukadiya.compat.biometric:Biometric-Compat:0.7.0'
 }
