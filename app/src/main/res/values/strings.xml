@@ -1,13 +1,12 @@
 <resources>
-    <string name="app_name">BiometricPrompt-Sample</string>
+    <string name="app_name">Biometric-Compat-Sample</string>
 
     <string name="btn_authenticate">Login</string>
 
     <string name="biometric_title">Login</string>
-    <string name="biometric_subtitle">Login to your Osta account</string>
-    <string name="biometric_description">Place your finger on the device home button to verify your identity</string>
-    <string name="biometric_negative_button_text">CANCEL</string>
-
+    <string name="biometric_subtitle">Login to your account</string>
+    <string name="biometric_description">Place your finger on the fingerprint sensor to verify your identity</string>
+    <string name="biometric_negative_button_text">Cancel</string>
 
     <string name="biometric_error_sdk_not_supported">Sdk version not supported</string>
     <string name="biometric_error_hardware_not_supported">Device does not support biometric authentication</string>
