@@ -1,0 +1,1 @@
+<img src="https://img.shields.io/badge/version-0.7.0-green.svg?style=flat" style="max-width:100%;" alt="version" data-canonical-src="https://img.shields.io/badge/version-0.7.0-green.svg?style=flat" style="max-width:100%;">

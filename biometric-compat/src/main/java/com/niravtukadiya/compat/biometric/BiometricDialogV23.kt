@@ -8,6 +8,10 @@ import com.an.biometric.R
 import com.google.android.material.bottomsheet.BottomSheetDialog
 import kotlinx.android.synthetic.main.view_bottom_sheet.*
 
+/**
+ * Created by Nirav Tukadiya on 22/07/18 8:58 PM.
+ * nirav.tukadiya@gmail.com
+ */
 open class BiometricDialogV23 : BottomSheetDialog, View.OnClickListener {
 
     lateinit var mContext: Context

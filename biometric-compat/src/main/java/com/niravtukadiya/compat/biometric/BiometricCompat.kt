@@ -7,6 +7,10 @@ import android.hardware.biometrics.BiometricPrompt
 import android.os.Build
 import android.os.CancellationSignal
 
+/**
+ * Created by Nirav Tukadiya on 22/07/18 8:58 PM.
+ * nirav.tukadiya@gmail.com
+ */
 class BiometricCompat protected constructor(biometricBuilder: BiometricBuilder) : BiometricCompatV23() {
 
 

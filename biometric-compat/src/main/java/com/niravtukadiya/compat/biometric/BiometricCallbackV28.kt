@@ -4,7 +4,10 @@ import android.hardware.biometrics.BiometricPrompt
 import androidx.annotation.RequiresApi
 import android.os.Build
 
-
+/**
+ * Created by Nirav Tukadiya on 22/07/18 8:58 PM.
+ * nirav.tukadiya@gmail.com
+ */
 @RequiresApi(api = Build.VERSION_CODES.P)
 class BiometricCallbackV28(private val biometricCallback: BiometricCallback) : BiometricPrompt.AuthenticationCallback() {
 

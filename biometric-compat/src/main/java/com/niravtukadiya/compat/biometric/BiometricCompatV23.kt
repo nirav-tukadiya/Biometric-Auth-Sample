@@ -28,7 +28,10 @@ import javax.crypto.SecretKey
 import androidx.core.hardware.fingerprint.FingerprintManagerCompat
 import androidx.core.os.CancellationSignal
 
-
+/**
+ * Created by Nirav Tukadiya on 22/07/18 8:58 PM.
+ * nirav.tukadiya@gmail.com
+ */
 @TargetApi(Build.VERSION_CODES.M)
 open class BiometricCompatV23 {
 

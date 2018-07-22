@@ -9,7 +9,10 @@ import android.os.Build
 import androidx.core.app.ActivityCompat
 import androidx.core.hardware.fingerprint.FingerprintManagerCompat
 
-
+/**
+ * Created by Nirav Tukadiya on 22/07/18 8:58 PM.
+ * nirav.tukadiya@gmail.com
+ */
 object BiometricUtils {
 
     val isBiometricPromptEnabled: Boolean

@@ -1,5 +1,11 @@
 package com.niravtukadiya.compat.biometric
 
+/**
+ * Created by Nirav Tukadiya on 22/07/18 8:58 PM.
+ * nirav.tukadiya@gmail.com
+ */
+
+@Deprecated("This will be updated in upcoming versions.")
 interface BiometricCallback {
 
     fun onSdkVersionNotSupported()
@@ -11,7 +17,6 @@ interface BiometricCallback {
     fun onBiometricAuthenticationPermissionNotGranted()
 
     fun onBiometricAuthenticationInternalError(error: String?)
-
 
     fun onAuthenticationFailed()
 

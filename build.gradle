@@ -10,6 +10,8 @@ buildscript {
     dependencies {
         classpath 'com.android.tools.build:gradle:3.3.0-alpha03'
         classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
+        classpath 'com.github.dcendents:android-maven-gradle-plugin:2.0'
+        classpath 'com.jfrog.bintray.gradle:gradle-bintray-plugin:1.7.3'
 
         // NOTE: Do not place your application dependencies here; they belong
         // in the individual module build.gradle files
@@ -25,4 +27,30 @@ allprojects {
 
 task clean(type: Delete) {
     delete rootProject.buildDir
+}
+
+
+ext {
+    bintrayRepo = 'maven'
+    bintrayName = 'Biometric-Compat'
+
+    publishedGroupId = 'com.niravtukadiya.compat.biometric'
+    libraryName = 'Biometric-Compat'
+    artifact = 'Biometric-Compat'
+
+    libraryDescription = 'It provides an easy way to implement fingerprint authentication without having to deal with all the boilerplate stuff going on inside. It is also compatible from Android M to Android P.'
+
+    siteUrl = 'https://github.com/nirav-tukadiya/Biometric-Compat'
+    gitUrl = 'https://github.com/nirav-tukadiya/Biometric-Compat.git'
+
+    libraryVersion = '0.7.0'
+    libraryVersionCode = 70
+
+    developerId = 'nirav-tukadiya'
+    developerName = 'Nirav Tukadiya'
+    developerEmail = 'nirav.tukadiya@gmail.com'
+
+    licenseName = 'The Apache Software License, Version 2.0'
+    licenseUrl = 'http://www.apache.org/licenses/LICENSE-2.0.txt'
+    allLicenses = ["Apache-2.0"]
 }

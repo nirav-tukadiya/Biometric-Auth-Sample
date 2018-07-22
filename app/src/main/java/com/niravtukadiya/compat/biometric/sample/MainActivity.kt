@@ -1,7 +1,6 @@
 package com.niravtukadiya.compat.biometric.sample
 
 import android.os.Bundle
-import android.widget.Button
 import android.widget.Toast
 
 import com.niravtukadiya.compat.biometric.BiometricCallback
@@ -9,6 +8,10 @@ import com.niravtukadiya.compat.biometric.BiometricCompat
 import androidx.appcompat.app.AppCompatActivity
 import kotlinx.android.synthetic.main.activity_main.*
 
+/**
+ * Created by Nirav Tukadiya on 22/07/18 8:58 PM.
+ * nirav.tukadiya@gmail.com
+ */
 class MainActivity : AppCompatActivity(), BiometricCallback {
 
     override fun onCreate(savedInstanceState: Bundle?) {
