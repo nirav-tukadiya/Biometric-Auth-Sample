@@ -4,7 +4,6 @@ import android.content.Context
 import android.content.DialogInterface
 import android.view.View
 
-import com.an.biometric.R
 import com.google.android.material.bottomsheet.BottomSheetDialog
 import kotlinx.android.synthetic.main.view_bottom_sheet.*
 
