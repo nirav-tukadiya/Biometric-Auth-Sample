@@ -18,9 +18,9 @@ It provides an easy way to implement fingerprint authentication without having t
 
 repositories {
         jcenter()
-         maven {
-              url "https://dl.bintray.com/nirav-tukadiya/maven/"
-         }
+        maven {
+             url "https://dl.bintray.com/nirav-tukadiya/maven/"
+        }
 }
 
 dependencies {
