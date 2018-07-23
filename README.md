@@ -2,7 +2,7 @@
 
 It provides an easy way to implement fingerprint authentication without having to deal with all the boilerplate stuff going on inside. It is also compatible from Android M to Android P.
 
-<img src="https://img.shields.io/badge/API-23%2B-blue.svg?style=flat" style="max-width:100%;" alt="API" data-canonical-src="https://img.shields.io/badge/API-23%2B-blue.svg?style=flat" style="max-width:100%;">       <img src="https://img.shields.io/badge/version-0.7.0-green.svg?style=flat" style="max-width:100%;" alt="version" data-canonical-src="https://img.shields.io/badge/version-0.7.0-green.svg?style=flat" style="max-width:100%;">
+<img src="https://img.shields.io/badge/API-23%2B-blue.svg?style=flat" style="max-width:100%;" alt="API" data-canonical-src="https://img.shields.io/badge/API-23%2B-blue.svg?style=flat" style="max-width:100%;">       <img src="https://img.shields.io/badge/version-0.7.1-green.svg?style=flat" style="max-width:100%;" alt="version" data-canonical-src="https://img.shields.io/badge/version-0.7.1-green.svg?style=flat" style="max-width:100%;">
 
 
 
@@ -18,11 +18,13 @@ It provides an easy way to implement fingerprint authentication without having t
 
 repositories {
         jcenter()
-        mavenCentral()
+         maven {
+              url "https://dl.bintray.com/nirav-tukadiya/maven/"
+         }
 }
 
 dependencies {
-        implementation 'com.niravtukadiya.compat.biometric:Biometric-Compat:0.7.0'
+        implementation 'com.niravtukadiya.compat.biometric:Biometric-Compat:0.7.1'
 }
 ```
 

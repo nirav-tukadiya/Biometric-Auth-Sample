@@ -32,19 +32,19 @@ task clean(type: Delete) {
 
 ext {
     bintrayRepo = 'maven'
-    bintrayName = 'Biometric-Compat'
+    bintrayName = 'biometric-compat'
 
     publishedGroupId = 'com.niravtukadiya.compat.biometric'
-    libraryName = 'Biometric-Compat'
-    artifact = 'Biometric-Compat'
+    libraryName = 'biometric-compat'
+    artifact = 'biometric-compat'
 
     libraryDescription = 'It provides an easy way to implement fingerprint authentication without having to deal with all the boilerplate stuff going on inside. It is also compatible from Android M to Android P.'
 
     siteUrl = 'https://github.com/nirav-tukadiya/Biometric-Compat'
     gitUrl = 'https://github.com/nirav-tukadiya/Biometric-Compat.git'
 
-    libraryVersion = '0.7.0'
-    libraryVersionCode = 70
+    libraryVersion = '0.7.1'
+    libraryVersionCode = 71
 
     developerId = 'nirav-tukadiya'
     developerName = 'Nirav Tukadiya'
