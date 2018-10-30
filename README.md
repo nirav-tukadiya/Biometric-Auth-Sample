@@ -56,8 +56,6 @@ Note: in case of custom view, it shall have following children:
 The ```BiometricCallback``` class has the following callback methods:
 
 ```
-//Will be optimized to simpler callback
-
     // one of the pre conditions failed
     // ON_SDK_NOT_SUPPORTED - minimum sdk version required is Build.VERSION_CODES.M
     // ON_BIOMETRIC_AUTH_NOT_SUPPORTED - hardware isn't present
