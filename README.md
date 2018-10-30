@@ -40,6 +40,17 @@ dependencies {
                     .setNegativeButtonText("Add a cancel button")
                     .build()
                     .authenticate(biometricCallback)
+
+```
+
+Note: in case of custom view, it shall have following children:
+```
+ bc_btn_cancel: Button
+ bc_item_title: TextView
+ bc_item_status: TextView
+ bc_item_subtitle: TextView
+ bc_item_description: TextView
+ bc_img_logo: ImageView
 ```
 
 The ```BiometricCallback``` class has the following callback methods:
