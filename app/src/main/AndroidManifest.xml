@@ -9,7 +9,6 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
 
-
         <activity android:name="com.niravtukadiya.compat.biometric.sample.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

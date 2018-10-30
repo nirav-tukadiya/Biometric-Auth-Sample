@@ -5,10 +5,16 @@ package com.niravtukadiya.compat.biometric
  * nirav.tukadiya@gmail.com
  */
 
-interface BiometricCallback {
+@Deprecated("This will be updated in upcoming versions.")
+interface BiometricCallbackLegacy {
 
-    //sdk not supported, biometric auth not supported, biometric auth not available, biometric auth permission not granted
-    fun onPreConditionsFailed(error: BiometricError)
+    fun onSdkVersionNotSupported()
+
+    fun onBiometricAuthenticationNotSupported()
+
+    fun onBiometricAuthenticationNotAvailable()
+
+    fun onBiometricAuthenticationPermissionNotGranted()
 
     fun onBiometricAuthenticationInternalError(error: String?)
 

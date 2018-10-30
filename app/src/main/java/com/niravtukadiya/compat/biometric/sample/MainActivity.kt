@@ -6,6 +6,7 @@ import android.widget.Toast
 import com.niravtukadiya.compat.biometric.BiometricCallback
 import com.niravtukadiya.compat.biometric.BiometricCompat
 import androidx.appcompat.app.AppCompatActivity
+import com.niravtukadiya.compat.biometric.BiometricError
 import kotlinx.android.synthetic.main.activity_main.*
 
 /**
@@ -13,6 +14,16 @@ import kotlinx.android.synthetic.main.activity_main.*
  * nirav.tukadiya@gmail.com
  */
 class MainActivity : AppCompatActivity(), BiometricCallback {
+    override fun onPreConditionsFailed(error: BiometricError) {
+
+        when(error){
+            BiometricError.ON_SDK_NOT_SUPPORTED -> Toast.makeText(applicationContext, getString(R.string.biometric_error_sdk_not_supported), Toast.LENGTH_LONG).show()
+            BiometricError.ON_BIOMETRIC_AUTH_NOT_SUPPORTED -> Toast.makeText(applicationContext, getString(R.string.biometric_error_hardware_not_supported), Toast.LENGTH_LONG).show()
+            BiometricError.ON_BIOMETRIC_AUTH_NOT_AVAILABLE -> Toast.makeText(applicationContext, getString(R.string.biometric_error_fingerprint_not_available), Toast.LENGTH_LONG).show()
+            BiometricError.ON_BIOMETRIC_AUTH_PERMISSION_NOT_GRANTED -> Toast.makeText(applicationContext, getString(R.string.biometric_error_permission_not_granted), Toast.LENGTH_LONG).show()
+        }
+
+    }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -27,22 +38,6 @@ class MainActivity : AppCompatActivity(), BiometricCallback {
                     .build()
                     .authenticate(this)
         }
-    }
-
-    override fun onSdkVersionNotSupported() {
-        Toast.makeText(applicationContext, getString(R.string.biometric_error_sdk_not_supported), Toast.LENGTH_LONG).show()
-    }
-
-    override fun onBiometricAuthenticationNotSupported() {
-        Toast.makeText(applicationContext, getString(R.string.biometric_error_hardware_not_supported), Toast.LENGTH_LONG).show()
-    }
-
-    override fun onBiometricAuthenticationNotAvailable() {
-        Toast.makeText(applicationContext, getString(R.string.biometric_error_fingerprint_not_available), Toast.LENGTH_LONG).show()
-    }
-
-    override fun onBiometricAuthenticationPermissionNotGranted() {
-        Toast.makeText(applicationContext, getString(R.string.biometric_error_permission_not_granted), Toast.LENGTH_LONG).show()
     }
 
     override fun onBiometricAuthenticationInternalError(error: String?) {

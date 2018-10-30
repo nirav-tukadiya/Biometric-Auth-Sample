@@ -29,7 +29,6 @@ class BiometricCompat protected constructor(biometricBuilder: BiometricBuilder) 
             biometricCallback.onBiometricAuthenticationInternalError("Biometric Dialog title cannot be null")
         }
 
-
         if (subtitle == null) {
             biometricCallback.onBiometricAuthenticationInternalError("Biometric Dialog subtitle cannot be null")
         }
@@ -43,21 +42,20 @@ class BiometricCompat protected constructor(biometricBuilder: BiometricBuilder) 
             biometricCallback.onBiometricAuthenticationInternalError("Biometric Dialog negative button text cannot be null")
         }
 
-
         if (!BiometricUtils.isSdkVersionSupported) {
-            biometricCallback.onSdkVersionNotSupported()
+            biometricCallback.onPreConditionsFailed(BiometricError.ON_SDK_NOT_SUPPORTED)
         }
 
         if (!BiometricUtils.isPermissionGranted(context)) {
-            biometricCallback.onBiometricAuthenticationPermissionNotGranted()
+            biometricCallback.onPreConditionsFailed(BiometricError.ON_BIOMETRIC_AUTH_PERMISSION_NOT_GRANTED)
         }
 
         if (!BiometricUtils.isHardwareSupported(context)) {
-            biometricCallback.onBiometricAuthenticationNotSupported()
+            biometricCallback.onPreConditionsFailed(BiometricError.ON_BIOMETRIC_AUTH_NOT_SUPPORTED)
         }
 
         if (!BiometricUtils.isFingerprintAvailable(context)) {
-            biometricCallback.onBiometricAuthenticationNotAvailable()
+            biometricCallback.onPreConditionsFailed(BiometricError.ON_BIOMETRIC_AUTH_NOT_AVAILABLE)
         }
 
         displayBiometricDialog(biometricCallback)
