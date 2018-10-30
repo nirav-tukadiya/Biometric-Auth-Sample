@@ -24,7 +24,7 @@ repositories {
 }
 
 dependencies {
-        implementation 'com.niravtukadiya.compat.biometric:Biometric-Compat:0.7.1'
+        implementation 'com.niravtukadiya.compat.biometric:Biometric-Compat:0.9.0'
 }
 ```
 
