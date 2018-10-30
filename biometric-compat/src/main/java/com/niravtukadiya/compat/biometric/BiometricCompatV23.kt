@@ -44,6 +44,7 @@ open class BiometricCompatV23 {
     protected var subtitle: String? = null
     protected var description: String? = null
     protected var negativeButtonText: String? = null
+    protected var layoutRes: Int? = 0
     private lateinit var biometricDialogV23: BiometricDialogV23
 
 
@@ -90,7 +91,7 @@ open class BiometricCompatV23 {
 
 
     private fun displayBiometricDialog(biometricCallback: BiometricCallback) {
-        biometricDialogV23 = BiometricDialogV23(context, biometricCallback)
+        biometricDialogV23 = BiometricDialogV23(context, biometricCallback, layoutRes)
         biometricDialogV23.setTitle(title)
         biometricDialogV23.setSubtitle(subtitle)
         biometricDialogV23.setDescription(description)
@@ -100,11 +101,11 @@ open class BiometricCompatV23 {
 
 
     private fun dismissDialog() {
-            biometricDialogV23.dismiss()
+        biometricDialogV23.dismiss()
     }
 
     private fun updateStatus(status: String) {
-            biometricDialogV23.updateStatus(status)
+        biometricDialogV23.updateStatus(status)
     }
 
     private fun generateKey() {

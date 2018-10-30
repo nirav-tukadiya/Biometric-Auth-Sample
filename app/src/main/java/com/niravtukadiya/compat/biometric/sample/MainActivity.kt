@@ -32,6 +32,7 @@ class MainActivity : AppCompatActivity(), BiometricCallback {
         btn_authenticate.setOnClickListener {
             BiometricCompat.BiometricBuilder(this)
                     .setTitle(getString(R.string.biometric_title))
+                    .setLayout(R.layout.custom_view_bottom_sheet)
                     .setSubtitle(getString(R.string.biometric_subtitle))
                     .setDescription(getString(R.string.biometric_description))
                     .setNegativeButtonText(getString(R.string.biometric_negative_button_text))

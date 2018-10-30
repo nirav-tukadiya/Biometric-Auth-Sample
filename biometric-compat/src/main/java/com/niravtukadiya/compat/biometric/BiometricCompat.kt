@@ -20,6 +20,7 @@ class BiometricCompat protected constructor(biometricBuilder: BiometricBuilder) 
         this.subtitle = biometricBuilder.subtitle
         this.description = biometricBuilder.description
         this.negativeButtonText = biometricBuilder.negativeButtonText
+        this.layoutRes = biometricBuilder.customLayoutRes
     }
 
 
@@ -90,11 +91,13 @@ class BiometricCompat protected constructor(biometricBuilder: BiometricBuilder) 
         var subtitle: String? = null
         var description: String? = null
         var negativeButtonText: String? = null
+        var customLayoutRes: Int? = null
 
         fun setTitle(title: String): BiometricBuilder {
             this.title = title
             return this
         }
+
 
         fun setSubtitle(subtitle: String): BiometricBuilder {
             this.subtitle = subtitle
@@ -109,6 +112,11 @@ class BiometricCompat protected constructor(biometricBuilder: BiometricBuilder) 
 
         fun setNegativeButtonText(negativeButtonText: String): BiometricBuilder {
             this.negativeButtonText = negativeButtonText
+            return this
+        }
+
+        fun setLayout(layout: Int): BiometricBuilder {
+            this.customLayoutRes = layout
             return this
         }
 
