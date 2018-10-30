@@ -63,16 +63,22 @@ The ```BiometricCallback``` class has the following callback methods:
     // ON_BIOMETRIC_AUTH_PERMISSION_NOT_GRANTED - USE_FINGERPRINT permission is not granted
     fun onPreConditionsFailed(error: BiometricError)
 
+    // when title, subtitle, description or the negative button text is empty
     fun onBiometricAuthenticationInternalError(error: String?)
 
+    //Called when a biometric is valid but not recognized.
     fun onAuthenticationFailed()
 
+    //when user cancels authentication
     fun onAuthenticationCancelled()
 
+    //Called when a biometric is recognized.
     fun onAuthenticationSuccessful()
 
+    //when a recoverable error has been encountered during authentication.
     fun onAuthenticationHelp(helpCode: Int, helpString: CharSequence?)
 
+    //Called when an unrecoverable error has been encountered and the operation is complete
     fun onAuthenticationError(errorCode: Int, errString: CharSequence?)
 ```
 
