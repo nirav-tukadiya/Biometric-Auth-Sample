@@ -82,6 +82,8 @@ The ```BiometricCallback``` class has the following callback methods:
     fun onAuthenticationError(errorCode: Int, errString: CharSequence?)
 ```
 
+Please refer to [Help and Error Codes](https://developer.android.com/reference/android/hardware/biometrics/BiometricPrompt#constants_1) of BiometricPrompt
+
 
 Acknowledgements
 ----------------
