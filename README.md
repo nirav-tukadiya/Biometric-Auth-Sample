@@ -36,6 +36,7 @@ dependencies {
                     .setTitle("Add a title")
                     .setSubtitle("Add a subtitle")
                     .setDescription("Add a description")
+                    .setLayout(R.layout.your_layout_resource)
                     .setNegativeButtonText("Add a cancel button")
                     .build()
                     .authenticate(biometricCallback)
@@ -46,6 +47,24 @@ The ```BiometricCallback``` class has the following callback methods:
 ```
 //Will be optimized to simpler callback
 
+    // one of the pre conditions failed
+    // ON_SDK_NOT_SUPPORTED - minimum sdk version required is Build.VERSION_CODES.M
+    // ON_BIOMETRIC_AUTH_NOT_SUPPORTED - hardware isn't present
+    // ON_BIOMETRIC_AUTH_NOT_AVAILABLE - no fingerprints are enrolled
+    // ON_BIOMETRIC_AUTH_PERMISSION_NOT_GRANTED - USE_FINGERPRINT permission is not granted
+    fun onPreConditionsFailed(error: BiometricError)
+
+    fun onBiometricAuthenticationInternalError(error: String?)
+
+    fun onAuthenticationFailed()
+
+    fun onAuthenticationCancelled()
+
+    fun onAuthenticationSuccessful()
+
+    fun onAuthenticationHelp(helpCode: Int, helpString: CharSequence?)
+
+    fun onAuthenticationError(errorCode: Int, errString: CharSequence?)
 ```
 
 

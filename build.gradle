@@ -46,8 +46,8 @@ ext {
     siteUrl = 'https://github.com/nirav-tukadiya/Biometric-Compat'
     gitUrl = 'https://github.com/nirav-tukadiya/Biometric-Compat.git'
 
-    libraryVersion = '0.7.1'
-    libraryVersionCode = 71
+    libraryVersion = '0.9.0'
+    libraryVersionCode = 90
 
     developerId = 'nirav-tukadiya'
     developerName = 'Nirav Tukadiya'
