@@ -155,9 +155,14 @@ open class BiometricCompatV23 {
 
         try {
             keyStore.load(null)
-            val key = keyStore.getKey(KEY_NAME, null) as SecretKey
-            cipher.init(Cipher.ENCRYPT_MODE, key)
-            return true
+            val key = keyStore.getKey(KEY_NAME, null)
+            return if (key != null) {
+                cipher.init(Cipher.ENCRYPT_MODE, key as SecretKey)
+                true
+            } else {
+                false
+            }
+
 
         } catch (e: KeyPermanentlyInvalidatedException) {
             return false
@@ -173,6 +178,8 @@ open class BiometricCompatV23 {
             throw RuntimeException("Failed to init Cipher", e)
         } catch (e: InvalidKeyException) {
             throw RuntimeException("Failed to init Cipher", e)
+        } catch (e: TypeCastException) {
+            return false
         }
     }
 
